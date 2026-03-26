@@ -1,4 +1,4 @@
-# 📬 Gmail CLI
+# 📬 === Gmail CLI Manager ===
 
 Небольшое CLI-приложение для управления Gmail через OAuth2.
 
