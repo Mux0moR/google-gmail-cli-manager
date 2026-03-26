@@ -99,6 +99,20 @@ python3 gmail_cli.py bulk-trash --query "from:sender@example.com" --max 100
 python3 gmail_cli.py bulk-trash --query "from:sender@example.com" --max 100 --apply
 ```
 
+### 🧽 Удалить (в корзину) письма которым более 180 дней
+
+Сначала посмотрите, какие письма попадут под фильтр (dry-run, ничего не меняет):
+
+```bash
+python3 gmail_cli.py bulk-trash --query "older_than:180d" --max 500
+```
+
+Переместить их в корзину 🗑️ письма которым более 180 дней:
+
+```bash
+python3 gmail_cli.py bulk-trash --query "older_than:180d" --max 500 --apply
+```
+
 Полезные варианты `--query`:
 
 - Только входящие: `from:sender@example.com label:inbox`
